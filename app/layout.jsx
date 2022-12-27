@@ -1,11 +1,11 @@
-import { Open_Sans } from "@next/font/google"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-import "../styles/globals.css"
+import { Open_Sans } from '@next/font/google';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import '../styles/globals.css';
 
 const openSansFont = Open_Sans({
   weights: [300, 400, 600, 700],
-})
+});
 
 export default function RootLayout({ children }) {
   return (
@@ -16,5 +16,5 @@ export default function RootLayout({ children }) {
         <Footer />
       </body>
     </html>
-  )
+  );
 }
