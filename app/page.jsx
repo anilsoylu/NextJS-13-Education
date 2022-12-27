@@ -12,9 +12,10 @@ export default async function Home() {
   return (
     <>
       <h1 className="mb-5 text-3xl font-bold underline">Hello, Next.js!</h1>
-      {posts.map((post) => (
-        <BlogCard key={post.id} post={post} />
-      ))}
+
+      <div className="my-5 text-lg font-bold text-white">
+        Home Page Updated Soon...
+      </div>
     </>
   );
 }

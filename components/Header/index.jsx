@@ -7,7 +7,8 @@ function Header() {
       <Link href="/" className="text-2xl font-bold">
         <span>Blog</span>
       </Link>
-      <nav>
+      <nav className="flex gap-x-2">
+        <Link href="/blog">Blog</Link>
         <Link href="https://github.com/anilsoylu" target="_blank ">
           About
         </Link>

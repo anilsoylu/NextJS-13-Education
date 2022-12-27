@@ -2,12 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import styles from './styles.module.css';
+var slug = require('slug');
 
 function BlogCard({ post }) {
   return (
     <Link
-      href="/"
-      className="flex items-center flex-1 mb-5 gap-x-4 max-sm:flex-wrap"
+      href={`/blog/${slug(post.title)}-${post.id}`}
+      className="flex items-center flex-1 gap-x-4 max-sm:flex-wrap"
     >
       <div className="max-sm:h-[150px relative h-24 w-24 flex-shrink-0 max-sm:mb-4 max-sm:w-[100%]">
         <Image
@@ -15,7 +16,7 @@ function BlogCard({ post }) {
           alt={post.title}
           fill
           priority={true}
-          className="object-cover border-r-8"
+          className="object-cover rounded-lg"
         />
       </div>
       <div>
