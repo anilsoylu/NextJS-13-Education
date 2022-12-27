@@ -1,4 +1,6 @@
 import { Open_Sans } from "@next/font/google"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
 import "../styles/globals.css"
 
 const openSansFont = Open_Sans({
@@ -9,13 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr" className={openSansFont.className}>
       <body className="container mx-auto">
-        <header>
-          <p>Header</p>
-        </header>
+        <Header />
         <main>{children}</main>
-        <footer className="container mx-auto">
-          <p>Footer</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   )
