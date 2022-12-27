@@ -34,7 +34,6 @@ h5,
 h6,
 a {
   color: var(--white);
-  cursor: pointer;
 }
 a {
   text-decoration: none;
