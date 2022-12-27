@@ -5,6 +5,20 @@ const nextConfig = {
     // Required:
     appDir: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+    ],
+  },
+  fontLoaders: [
+    {
+      loader: '@next/font/google',
+      options: { subsets: ['latin'], display: 'swap' },
+    },
+  ],
 };
 
 module.exports = nextConfig;
