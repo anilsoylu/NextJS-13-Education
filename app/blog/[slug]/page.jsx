@@ -1,15 +1,26 @@
 import React from 'react';
-import axios from 'axios';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
-async function getPosts(blogId) {
-  const res = await axios.get(`https://dummyjson.com/posts/${blogId}`);
-  return res.data;
+async function getPost(slug) {
+  try {
+    const res = await fetch(`https://dummyjson.com/posts/${slug}`);
+    if (!res.ok) return undefined;
+    return res.json();
+  } catch (err) {
+    throw new Error(err);
+  }
 }
 
 async function Page({ params }) {
   const blogId = params.slug.toString().split('-').slice(-1)[0];
-  const { id, title, body } = await getPosts(blogId);
+  const blog = await getPost(blogId);
+
+  if (!blog) {
+    return notFound();
+  }
+
+  const { id, title, body } = blog;
 
   return (
     <div className="flex flex-col items-center mb-5 text-center">
