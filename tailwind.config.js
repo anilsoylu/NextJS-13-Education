@@ -28,9 +28,6 @@ module.exports = {
         instagram: "#e1306c",
         pinterest: "#bd081c",
       },
-      fontFamily: {
-        sans: ["Open Sans", "sans-serif"],
-      },
     },
   },
   plugins: [],
